@@ -1,0 +1,31 @@
+exp_name: 'project'
+env_name: 'LunarLander-v2'
+# seed: 33
+# seed: 44
+seed: 55
+run_id: 0
+agent_name: 'ddpg'
+train_episodes: 6000
+gamma: 0.99 
+actor_lr: 0.0003 
+critic_lr: 0.0003
+tau: 0.005 
+warmup: 0
+batch_size: 256
+buffer_size: 1e6
+
+testing: false
+model_path: 'default'
+
+save_video: false
+save_logging: false
+save_model: true
+use_wandb: false
+silent: false
+
+run_suffix: 0
+# ref: https://stackoverflow.com/questions/65104134/disable-file-output-of-hydra
+hydra:  
+    output_subdir: null  
+    run:  
+        dir: .
